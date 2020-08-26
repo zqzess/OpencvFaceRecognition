@@ -82,6 +82,8 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\Users\123\Desktop\new\OpencvTest\OpencvFaceRecognition\OpencvTest\opencv\build\include;C:\Users\123\Desktop\new\OpencvTest\OpencvFaceRecognition\OpencvTest\opencv\build\include\opencv;C:\Users\123\Desktop\new\OpencvTest\OpencvFaceRecognition\OpencvTest\opencv\build\include\opencv2;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\123\Desktop\new\OpencvTest\OpencvFaceRecognition\OpencvTest\opencv\build\x64\vc14\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -90,8 +92,8 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>C:\Users\123\Desktop\new\OpencvTest\OpencvTest\opencv\build\include;C:\Users\123\Desktop\new\OpencvTest\OpencvTest\opencv\build\include\opencv;C:\Users\123\Desktop\new\OpencvTest\OpencvTest\opencv\build\include\opencv2;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\123\Desktop\new\OpencvTest\OpencvTest\opencv\build\x64\vc14\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\123\Desktop\new\OpencvTest\OpencvFaceRecognition\OpencvTest\opencv\build\include;C:\Users\123\Desktop\new\OpencvTest\OpencvFaceRecognition\OpencvTest\opencv\build\include\opencv;C:\Users\123\Desktop\new\OpencvTest\OpencvFaceRecognition\OpencvTest\opencv\build\include\opencv2;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\123\Desktop\new\OpencvTest\OpencvFaceRecognition\OpencvTest\opencv\build\x64\vc14\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -126,6 +128,7 @@
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
+      <AdditionalDependencies>opencv_world320.lib;opencv_world320d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <Midl>
       <MkTypLibCompatible>false</MkTypLibCompatible>
