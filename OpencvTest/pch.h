@@ -10,4 +10,17 @@
 // 添加要在此处预编译的标头
 #include "framework.h"
 
+#include "opencv/build/include/opencv2/opencv.hpp"
+#include "opencv/build/include/opencv2/objdetect/objdetect.hpp"
+#include "opencv/build/include/opencv2/highgui/highgui.hpp"
+#include "opencv/build/include/opencv2/imgproc/imgproc.hpp"
+#include "opencv/build/include/opencv2/imgproc/types_c.h"
+#include "opencv/build/include/opencv2/core/core.hpp"
+#include "opencv/build/include/opencv2/features2d/features2d.hpp"
+#include "opencv/install/include/opencv2/face/facerec.hpp"
+#include "ArcFace/inc/arcsoft_face_sdk.h"
+#include "ArcFace/inc/merror.h"
+#include "ArcFace/inc/asvloffscreen.h"
+#include "ArcFace/inc/amcomdef.h"
+
 #endif //PCH_H

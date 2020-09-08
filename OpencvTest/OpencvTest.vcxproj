@@ -87,13 +87,13 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>C:\Users\123\Desktop\new\OpencvTest\OpencvTest\opencv\build\include;C:\Users\123\Desktop\new\OpencvTest\OpencvTest\opencv\build\include\opencv;C:\Users\123\Desktop\new\OpencvTest\OpencvTest\opencv\build\include\opencv2;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\123\Desktop\new\OpencvTest\OpencvTest\opencv\build\x64\vc14\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\123\Desktop\new\OpencvTest\OpencvFaceRecognition\OpencvTest\ArcFace\inc;C:\Users\123\Desktop\new\OpencvTest\OpencvFaceRecognition\OpencvTest\opencv\build\include;C:\Users\123\Desktop\new\OpencvTest\OpencvFaceRecognition\OpencvTest\opencv\build\include\opencv;C:\Users\123\Desktop\new\OpencvTest\OpencvFaceRecognition\OpencvTest\opencv\build\include\opencv2;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\123\Desktop\new\OpencvTest\OpencvFaceRecognition\OpencvTest\ArcFace\lib;C:\Users\123\Desktop\new\OpencvTest\OpencvFaceRecognition\OpencvTest\opencv\build\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>C:\Users\123\Desktop\new\OpencvTest\OpencvFaceRecognition\OpencvTest\opencv\build\include;C:\Users\123\Desktop\new\OpencvTest\OpencvFaceRecognition\OpencvTest\opencv\build\include\opencv;C:\Users\123\Desktop\new\OpencvTest\OpencvFaceRecognition\OpencvTest\opencv\build\include\opencv2;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\123\Desktop\new\OpencvTest\OpencvFaceRecognition\OpencvTest\opencv\build\x64\vc14\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>.\opencv\install\include;.\opencv\install\include\opencv;.\opencv\install\include\opencv2;.\opencv\build\include;.\opencv\build\include\opencv;.\opencv\build\include\opencv2;.\ArcFace\inc;$(IncludePath)</IncludePath>
+    <LibraryPath>.\ArcFace\lib;.\opencv\build\lib;.\opencv\install\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -148,14 +148,14 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>opencv_world320.lib;opencv_world320d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>opencv_world320.lib;opencv_world320d.lib;libarcsoft_face_engine.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <Midl>
       <MkTypLibCompatible>false</MkTypLibCompatible>
@@ -183,7 +183,8 @@
       <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>opencv_world320.lib;opencv_world320d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>opencv_world320.lib;opencv_world320d.lib;libarcsoft_face_engine.lib;opencv_face320d.lib;opencv_face320.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Users\123\Desktop\new\OpencvTest\OpencvFaceRecognition\OpencvTest\ArcFace\lib\X64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <Midl>
       <MkTypLibCompatible>false</MkTypLibCompatible>
@@ -197,6 +198,7 @@
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="ArcFaceEngine.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="MatImage.h" />
     <ClInclude Include="OpencvTest.h" />
@@ -206,6 +208,7 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="ArcFaceEngine.cpp" />
     <ClCompile Include="MatImage.cpp" />
     <ClCompile Include="OpencvTest.cpp" />
     <ClCompile Include="OpencvTestDlg.cpp" />
